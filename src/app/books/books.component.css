@@ -1,0 +1,43 @@
+.row .filter input[type="text"]{
+    border-radius: 4px 4px 4px 4px;
+    color: #555555;
+    display: inline-block;
+    font-size: 14px;
+    height: 26px;
+    /* line-height: 20px; */
+    margin-bottom: 0px;
+    padding: 4px 6px;
+    vertical-align: middle;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    width:206px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+table {
+    border-collapse: collapse;
+    width:100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+th,td {
+    height: 50px;
+
+}
+.button{
+    background-color:#C356E8;
+    display:block;
+    color:#ffffff;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    text-align: center;
+    padding:5px;
+    width:80px;
+    margin: 5px auto;
+    text-decoration: none;
+}

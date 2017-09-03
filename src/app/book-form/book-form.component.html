@@ -1,0 +1,41 @@
+<div>
+    <a class="trigger" href="#" (click) = "toggleForm()">{{triggerText}}</a>
+    <!--<a href="#">Create record</a>-->
+</div>
+<div class="recordForm" *ngIf="isToggleForm">
+    <h2>Create new record</h2>
+    <form #f="ngForm"
+    (ngSubmit)="onSubmit(f.value)">
+    <div class="control-group">
+        <label class="control-label" for="author">Author*</label>
+        <div class="controls">
+            <input id="author" type="text" name="author" ngModel>
+        </div>
+     </div>
+    <div class="control-group">
+        <label class="control-label" for="title">Book title*</label>
+        <div class="controls">
+            <input id="title" type="text" name="title" ngModel>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="location">Location*</label>
+        <div class="controls">
+            <input id="location" type="text" name="location" ngModel>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="medium">Medium*</label>
+        <div class="controls">
+            <input id="medium" type="text" name="medium" ngModel>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="notes">Notes*</label>
+        <div class="controls">
+            <input id="notes" type="text" name="notes" ngModel>
+        </div>
+    </div>
+    <button type="submit" class="button">Submit</button>
+    </form>
+</div>
