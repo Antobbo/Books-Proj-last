@@ -21,5 +21,13 @@ export class BookFormComponent implements OnInit {
 
    onSubmit(form: any):void{
        console.log(form);
+       //stringify
+       this.stringifyData(form);
    }
+
+    stringifyData(theForm):void{
+        var stringifiedForm = JSON.stringify(theForm);
+        console.log(stringifiedForm);
+
+    }
 }
