@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {BooksComponent} from '../books/books.component';
 
 @Component({
@@ -7,6 +7,7 @@ import {BooksComponent} from '../books/books.component';
   styleUrls: ['./book-form.component.css']
 })
 export class BookFormComponent implements OnInit {
+    @Input() books;
     triggerText: String = "Create record";
     isToggleForm: boolean = false;
     toggleForm():void{
@@ -28,6 +29,8 @@ export class BookFormComponent implements OnInit {
     stringifyData(theForm):void{
         var stringifiedForm = JSON.stringify(theForm);
         console.log(stringifiedForm);
+        BooksComponent.createNewRecord(stringifiedForm);
+        //console.log(this.books);
 
     }
 }
