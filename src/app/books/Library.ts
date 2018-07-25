@@ -1,4 +1,4 @@
-//import {Book} from './book';
+import {Book} from './Book';
 export class Library{
 
     private _books: Book[];
@@ -7,9 +7,9 @@ export class Library{
     }
 
     public addBook(){
-        //// TODO:
+        console.log("book added");
     }
     public removeBook(){
-        //// TODO:
+        console.log("book removed");
     }
 }

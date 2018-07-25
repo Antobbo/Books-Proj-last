@@ -32,7 +32,7 @@ export class BooksComponent implements OnInit {
     ];
 
     deleteRecord($event, thisBook): void{
-        console.log("Delete record n. " + thisBook.bookID);
+        console.log("Delete record n. " + thisBook.bookID + "; type " + typeof thisBook);
         for(var i = 0; i < this.books.length; i++){
           if(this.books[i].bookID == thisBook.bookID){
             console.log(this.books[i]);
