@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {IBook} from './ibook';
+
 @Component({
   selector: 'app-books',
   moduleId: module.id,//allows to use relative URLs
@@ -47,9 +48,9 @@ export class BooksComponent implements OnInit {
 
     static createNewRecord($record): void{
         console.log("createNewRecord() called");
-        console.log($record);
+        //console.log($record);
       //  this.books.push($record);
-        console.log($record);
+       // console.log($record);
       //  $event.preventDefault();
     }
 

@@ -1,13 +1,18 @@
 import {Book} from './Book';
 export class Library{
 
-    private _books: Book[];
+    private _books: Book[] = new Array();
+    constructor(){};
     public get books(){
         return this._books;
     }
 
-    public addBook(){
-        console.log("book added");
+    public addBook(book:Book){
+        console.log(book);
+        console.log(this._books);
+        this._books.push(book);
+
+
     }
     public removeBook(){
         console.log("book removed");

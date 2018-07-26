@@ -6,6 +6,15 @@ export class Book{
     private _medium: string;
     private _notes: string;
 
+    public constructor(bookID: number, bookAuthor: string, bookTitle: string, location: string, medium: string, notes: string){
+        this._bookID = bookID;
+        this._bookAuthor = bookAuthor;
+        this._bookTitle = bookTitle;
+        this._location = location;
+        this._medium = medium;
+        this._notes = notes;
+    }
+
     public set bookID(bookID: number){
         this._bookID = bookID;
     }
