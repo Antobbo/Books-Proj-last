@@ -33,7 +33,7 @@
     <td>{{book.location}}</td>
     <td>{{book.medium}}</td>
     <td>{{book.notes}}</td>
-    <td><a (click) = "deleteRecord($event,book)" href="#"  class="button">Remove</a><a (click) = "editRecord($event,book)" href="#" class="button">Edit</a></td>
+    <td><a (click) = "this.libraryService.removeBook(book)" href="#"  class="button">Remove</a><a (click) = "this.libraryService.editBook(book)" href="#" class="button">Edit</a></td>
 
     </tr>
 

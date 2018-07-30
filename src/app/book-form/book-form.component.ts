@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {BooksComponent} from '../books/books.component';
 import {Book} from '../books/Book';
 import {Library} from '../books/Library';
+import {LibraryService} from '../library.service';
 @Component({
   selector: 'app-book-form',
   templateUrl: './book-form.component.html',
@@ -9,7 +10,7 @@ import {Library} from '../books/Library';
 })
 export class BookFormComponent implements OnInit {
 
-    library: Library =  new Library();
+    //library: Library =  new Library();
     triggerText: String = "Create record";
     isToggleForm: boolean = false;
     toggleForm():void{
@@ -17,7 +18,7 @@ export class BookFormComponent implements OnInit {
         this.isToggleForm ? this.triggerText = "Close form" : this.triggerText = "Create record" ;
         console.log("isToggleForm is " + this.isToggleForm + "; triggerText is " + this.triggerText);
     }
-  constructor() { }
+  constructor(private libraryService: LibraryService) { }
 
   ngOnInit() {
   }
@@ -31,9 +32,8 @@ export class BookFormComponent implements OnInit {
       // this.generateBookId();
        let bookRecord:Book = new Book(this.generateBookId(), form.author, form.title, form.location, form.medium, form.notes );
 
-       this.library.addBook(bookRecord);
-       console.log(bookRecord);
-       console.log( this.library.books);
+       this.libraryService.addBook(bookRecord);
+      console.log( this.libraryService.books);
 
 
        //stringify

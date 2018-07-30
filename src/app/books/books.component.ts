@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {IBook} from './ibook';
+import {Book} from '../books/Book';
+import {Library} from '../books/Library';
+import {LibraryService} from '../library.service';
 
 @Component({
   selector: 'app-books',
@@ -57,7 +60,7 @@ export class BooksComponent implements OnInit {
     printArray(){//test method to remove
       console.log(this.books);
     }
-  constructor() { }
+  constructor(private libraryService: LibraryService) { }
 
   ngOnInit() {
   }

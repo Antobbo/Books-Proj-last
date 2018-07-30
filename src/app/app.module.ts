@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
 import { BookFilterPipe } from './books/book-filter.pipe';
 import { BookFormComponent } from './book-form/book-form.component';
+import { LibraryService } from './library.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { BookFormComponent } from './book-form/book-form.component';
     FormsModule,
       ReactiveFormsModule
   ],
-  providers: [],
+  providers: [LibraryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

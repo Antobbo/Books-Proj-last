@@ -14,7 +14,7 @@ export class Library{
 
 
     }
-    public removeBook(){
+    public removeBook(book:Book){
         console.log("book removed");
     }
 }
