@@ -14,6 +14,8 @@ import {LibraryService} from '../library.service';
 export class BooksComponent implements OnInit {
     pageTitle: string = "Book list";
     listFilter: string = "";
+    bookList: Book[];
+    //get the booklist and then we can use it to loop through it in the html file
 
     //this will need to come from the database eventually
     books: IBook[] = [
@@ -35,20 +37,6 @@ export class BooksComponent implements OnInit {
         }
     ];
 
-    deleteRecord($event, thisBook): void{
-        console.log("Delete record n. " + thisBook.bookID + "; type " + typeof thisBook);
-        for(var i = 0; i < this.books.length; i++){
-          if(this.books[i].bookID == thisBook.bookID){
-            console.log(this.books[i]);
-            this.books.splice(i, 1);
-          }
-        }
-    }
-    editRecord($event,thisBook): void{
-        console.log("Edit record n. " + thisBook.bookID);
-        $event.preventDefault();
-    }
-
     static createNewRecord($record): void{
         console.log("createNewRecord() called");
         //console.log($record);
@@ -57,9 +45,7 @@ export class BooksComponent implements OnInit {
       //  $event.preventDefault();
     }
 
-    printArray(){//test method to remove
-      console.log(this.books);
-    }
+
   constructor(private libraryService: LibraryService) { }
 
   ngOnInit() {
